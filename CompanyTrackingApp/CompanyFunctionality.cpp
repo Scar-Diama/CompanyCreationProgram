@@ -9,6 +9,7 @@ Company::Company() {		//This is the default constructor, this will run when a co
 	postcode = "";
 }
 
+
 //Parameterized constructor
 Company::Company(std::string companyName, std::string owner, std::string address, std::string postcode) {
 
