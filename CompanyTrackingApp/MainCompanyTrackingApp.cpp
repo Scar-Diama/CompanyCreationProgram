@@ -37,9 +37,9 @@ int main()
             std::cout << "Certianly!\n";
             std::string companyName, owner, address, postcode;  //We declare the temp variables used to then parse into the object
 
-            std::cin.ignore();          //Ignores any previous input so nothing is messed up
+            std::cin.ignore();                                  //Ignores any previous input so nothing is messed up
             std::cout << "Enter the Company's name: \n";
-            std::getline(std::cin, companyName);           //we use getline so the user can include spaces etc, this puts the user input into companyName
+            std::getline(std::cin, companyName);                //we use getline so the user can include spaces etc, this puts the user input into companyName
             std::cout << "\n";
 
             std::cout << "Enter the Owner's name of the Company: \n";
@@ -54,7 +54,7 @@ int main()
             std::getline(std::cin, postcode);
             std::cout << "\n";
 
-            Company newCompany(companyName, owner, address, postcode);  //actually making the instance/object with the user inputs.
+            Company newCompany(companyName, owner, address, postcode);      //actually making the instance/object with the user inputs.
             std::cout << newCompany.getName() << " was created! \n";        //using thew getName function to display its info 
             writeCompanyToCSV(newCompany);
             break;
@@ -79,7 +79,7 @@ int main()
             std::cin.clear();
             std::cin.ignore();
             std::getline(std::cin, userCompanyEditChoice);
-            for (Company& company : companies) {                      //Company& company = reference to each element (no copying)  ":" in. so x in y "companies" being the vector you're looping through
+            for (Company& company : companies) {                            //Company& company = reference to each element (no copying)  ":" in. so x in y "companies" being the vector you're looping through
                 if (company.getName() == userCompanyEditChoice) {
                     std::cout << "Company Found!\n\n";
                     foundCompany = true;                                    //Check to see if we find it.
